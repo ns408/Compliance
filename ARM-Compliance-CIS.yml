@@ -1,0 +1,9 @@
+---
+- name: Running Compliance against RHEL
+  hosts:
+    rhel
+  vars: 
+    accelerate: true
+    user: root
+  roles:
+    - cis
