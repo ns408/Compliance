@@ -3,15 +3,6 @@
   hosts:
     rhel
   become: true
-  vars:
-    ansible_user: az_pass
-    ansible_password: Password@123
-  hosts:
-    rhel
-  become: true
-  vars:
-    ansible_user: az_pass
-    ansible_password: Password@123
   roles:
     - oscap-arm-rhel
    
