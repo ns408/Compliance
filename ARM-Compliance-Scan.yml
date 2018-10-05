@@ -6,17 +6,6 @@
   vars:
     ansible_user: az_pass
     ansible_password: Password@123
-  tasks:
-  
-  - name: Add Subscription to RHEL
-    redhat_subscription:
-      state: present
-      username: "{{ subscription_user }}" 
-      password: "{{ subscription_pass }}" 
-      auto_attach: true
-
-
-- name: Running Compliance against RHEL
   hosts:
     rhel
   become: true
@@ -24,7 +13,7 @@
     ansible_user: az_pass
     ansible_password: Password@123
   roles:
-    - oscap-rhel
+    - oscap-arm-rhel
    
 
 # - name: Running Compliance against Centos
