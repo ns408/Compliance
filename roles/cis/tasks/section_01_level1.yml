@@ -183,7 +183,6 @@
     command: readlink -f /etc/grub.conf
     register: readlink
     changed_when: false
-    always_run: yes
     tags:
       - scored
       - section1.5
@@ -203,7 +202,6 @@
     command: readlink -f /etc/grub.conf
     register: readlink
     changed_when: false
-    always_run: yes
     tags:
       - scored
       - section1.5
