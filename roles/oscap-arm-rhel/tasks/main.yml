@@ -12,7 +12,7 @@
   
   - name: install openscap scanner, ssg and httpd
     yum:
-      name: [u'openscap-scanner', u'scap-security-guide', u'httpd']
+      name: ['openscap-scanner', 'scap-security-guide', 'httpd']
       state: latest
 
   - block:
