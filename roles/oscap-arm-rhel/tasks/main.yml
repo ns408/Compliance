@@ -8,12 +8,8 @@
  
   - name: install openscap scanner, ssg and httpd
     yum:
-      name: "{{ item }}"
+      name: [u'openscap-scanner', u'scap-security-guide', u'httpd']
       state: latest
-    with_items:
-    - openscap-scanner
-    - scap-security-guide
-    - httpd
 
   - block:
     - name: run openscap
