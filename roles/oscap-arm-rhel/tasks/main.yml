@@ -7,8 +7,9 @@
       mode: 0644
 
   - name: Install EPEL repo
-    command: sudo yum install epel-release
-      
+    command: sudo yum install epel-release -f
+    ignore_errors: yes
+  
   - name: install openscap scanner, ssg and httpd
     yum:
       name: [u'openscap-scanner', u'scap-security-guide', u'httpd']
