@@ -1,11 +1,16 @@
-  - name: Add Subscription to RHEL
-    redhat_subscription:
-      state: present
-      username: "{{ subscription_user }}" 
-      password: "{{ subscription_pass }}" 
+  - name: Copy EPEL Repository
+    copy:
+      src: files/epel.repo
+      dest: /etc/yum.repos.d/epel.repo
+      owner: root
+      group: root
+      mode: 0644
 
- 
- 
+  - name: Install EPEL repo
+    yum:
+     name: epel-release
+     state: present
+      
   - name: install openscap scanner, ssg and httpd
     yum:
       name: [u'openscap-scanner', u'scap-security-guide', u'httpd']
