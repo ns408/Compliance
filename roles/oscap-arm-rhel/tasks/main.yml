@@ -3,7 +3,6 @@
       state: present
       username: "{{ subscription_user }}" 
       password: "{{ subscription_pass }}" 
-      auto_attach: true
 
  
  
